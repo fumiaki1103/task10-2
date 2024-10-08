@@ -8,6 +8,9 @@ $work = $_GET['work'] ?? '';
 $error = get_error();
 
 show_top();
+if ($error) {
+    echo "<p style='color: red;'>$error</p>";
+}
 show_form($id, $name, $age, $work, '', 'create', '登録');
 show_down(true);
 ?>
